@@ -1,0 +1,13 @@
+package br.sc.gov.cge.numdocs.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.sc.gov.cge.numdocs.model.Portaria;
+
+public interface NumPortariaRepository extends JpaRepository<Portaria, Long> {
+	
+	List<Portaria> findByResponsavel(String user);
+
+}
